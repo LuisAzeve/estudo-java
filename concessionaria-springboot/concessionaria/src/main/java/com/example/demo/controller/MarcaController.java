@@ -14,19 +14,19 @@ public class MarcaController {
     @Autowired
     private MarcaRepository repository;
 
-    // Substitui consultarMarcas()
+   
     @GetMapping
     public List<Marca> listar() {
         return repository.findAll();
     }
 
-    // Substitui cadastrarMarca()
+   
     @PostMapping
     public Marca cadastrar(@RequestBody Marca marca) {
         return repository.save(marca);
     }
 
-    // Substitui deletarMarca()
+   
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable int id) {
         repository.deleteById(id);
